@@ -9,9 +9,9 @@ ADD make_dot.sh /make_dot.sh
 ADD make_png.sh /make_png.sh
 
 RUN dnf install -y graphviz \
-                   python3-pip && \
+    python3-pip && \
     dnf clean all
 
 RUN pip install shyaml
 
-CMD sh make_dot.sh && make_png.sh
+CMD sh /make_dot.sh && /make_png.sh
