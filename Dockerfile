@@ -14,4 +14,4 @@ RUN dnf install -y graphviz \
 
 RUN pip install shyaml
 
-CMD cd ${GITHUB_REPOSITORY} && sh /make_dot.sh && sh /make_png.sh
+CMD cd ${GITHUB_REPOSITORY} && sh -x /make_dot.sh && sh -x /make_png.sh
